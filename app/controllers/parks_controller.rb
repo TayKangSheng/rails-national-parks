@@ -15,7 +15,7 @@ class ParksController < ApplicationController
 
   def new
     #code
-    @park = Park.new
+    @new_park = Park.new
   end
 
   def edit
@@ -24,6 +24,14 @@ class ParksController < ApplicationController
 
   def show
     #code
+    @park = Park.find(params[:id])
+
+    # byebug
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @park }
+    end
   end
 
   def update

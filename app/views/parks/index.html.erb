@@ -10,12 +10,13 @@
 
 <div class="row">
   <% @parks.each_with_index do | park, index | %>
-  <div class="well col-md-4">
-    <%=park.name%><br>
-    <%=park.description%><br>
-    <%=park.picture%>
-    <%= image_tag(park.picture, class:"thumbnail") %>
-  </div>
+    <div class="well col-md-4">
+      <pre><%=park.name%></pre>
+      <pre><%=park.description%></pre>
+      <pre><%=park.picture%></pre>
+      <pre><%= park.inspect %></pre>
+      <%= link_to park.name, park_path(park.id), class: "btn btn-primary" %>
+    </div>
   <% end %>
 </div>
 
