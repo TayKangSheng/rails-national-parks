@@ -1,0 +1,18 @@
+
+<div class="row" style="position: relative; margin-bottom: 5px">
+  <h1 style="float: left"> Parks </h1>
+  <a style="position: absolute; bottom:0; right: 0" href="/parks/new" class="btn btn-default">Add a new Park</a>
+</div>
+
+<% @parks.each do | park | %>
+  <div class="row well">
+    <%=park.name%><br>
+    <%=park.description%><br>
+    <%=park.picture%>
+  </div>
+<% end %>
+
+<div class="row">
+  <a href="#" class="btn btn-default" style="float: right"> Back to top.</a>
+
+</div>
