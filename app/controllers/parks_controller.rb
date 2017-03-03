@@ -2,6 +2,11 @@ class ParksController < ApplicationController
 
   def index
     @parks = Park.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @parks }
+    end
   end
 
   def create
