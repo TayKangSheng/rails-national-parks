@@ -11,5 +11,7 @@
 </div>
 
 <div class="row">
-  <%= link_to "Back", "/parks", class: "btn btn-primary" %>
+  <%= link_to "Back", parks_path, class: "btn btn-primary" %>
+  <%= link_to 'Edit', edit_park_path(@park.id), class: "btn btn-success" %>
+  <!-- <%= link_to "Delete", park_path(@park), :method => :delete, class: "btn btn-danger" %> -->
 </div>

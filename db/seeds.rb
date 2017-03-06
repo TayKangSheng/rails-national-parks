@@ -6,6 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-500.times do
+5.times do
   Park.create(name: Faker::Pokemon.location, description: Faker::Space.agency, picture: Faker::LoremPixel.image('50x60', false, 'nature'))
 end

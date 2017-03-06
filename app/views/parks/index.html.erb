@@ -15,7 +15,9 @@
       <pre><%=park.description%></pre>
       <pre><%=park.picture%></pre>
       <pre><%= park.inspect %></pre>
-      <%= link_to park.name, park_path(park.id), class: "btn btn-primary" %>
+      <%= link_to 'More details', park_path(park.id), class: "btn btn-primary" %>
+      <%= link_to 'Edit', edit_park_path(park.id), class: "btn btn-success" %>
+      <%= link_to "Delete", park_path(park.id), method: :delete, class: "btn btn-danger" %>
     </div>
   <% end %>
 </div>

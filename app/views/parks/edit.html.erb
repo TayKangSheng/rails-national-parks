@@ -1,0 +1,9 @@
+<h1>Edit a Park</h1>
+
+<%= bootstrap_form_for(@edit_park, label_error:true, method: :patch) do |f| %>
+  <%= f.text_field :name, label: "Park Name", :value => @edit_park.name %>
+  <%= f.text_field :description, :value => @edit_park.description %>
+  <%= f.text_field :picture, icon: "link", :value => @edit_park.picture %>
+  <%= f.hidden_field :id, :value => @edit_park.id %>
+  <%= f.primary "Submit" %>
+<% end %>
